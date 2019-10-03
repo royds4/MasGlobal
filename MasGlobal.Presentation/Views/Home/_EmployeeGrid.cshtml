@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "_EmployeeGrid";
+    Layout = null;
+}
+@model List<MasGlobal.Presentation.Models.EmployeeViewModel>
+    <div class="container">
+        <div class="row">
+            <div class="d-none d-sm-block col-sm-2">
+                <p>Id</p>
+            </div>
+            <div class="d-none d-sm-block col-sm-2">
+                <p>Name</p>
+            </div>
+            <div class="d-none d-sm-block col-sm-2">
+                <p>Role</p>
+            </div>
+            <div class="d-none d-sm-block col-sm-4">
+                <p>Contract</p>
+            </div>
+            <div class="d-none d-sm-block col-sm-2">
+                <p>Annual Salary</p>
+            </div>
+        </div>
+        @foreach (var employeeRow in Model)
+        {
+            <div class="row">
+                <div class="col-sm-2">
+                    @employeeRow.Id
+                </div>
+                <div class="col-sm-2">
+                    @employeeRow.Name
+                </div>
+                <div class="col-sm-2">
+                    @employeeRow.RoleName
+                </div>
+                <div class="col-sm-4">
+                    @employeeRow.ContractTypeName
+                </div>
+                <div class="col-sm-2">
+                    @employeeRow.AnnualSalary
+                </div>
+                <hr>
+            </div>
+        }
+
+    </div>
